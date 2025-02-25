@@ -39,5 +39,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_D1_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          workingDirectory: apps/api
           command: d1 migrations apply DO_D1_DB --remote
