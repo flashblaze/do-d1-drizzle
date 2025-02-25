@@ -11,5 +11,26 @@
       "migrations_dir": "drizzle/migrations",
       "migrations_table": "__drizzle_migrations"
     }
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "DO_D1_DO",
+        "class_name": "SampleObject"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["SampleObject"]
+    }
+  ],
+  "rules": [
+    {
+      "type": "Text",
+      "globs": ["**/*.sql"],
+      "fallthrough": true
+    }
   ]
 }

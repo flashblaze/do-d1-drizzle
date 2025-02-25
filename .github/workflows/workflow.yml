@@ -40,3 +40,8 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_D1_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: d1 migrations apply DO_D1_DB --remote
+
+      - name: Apply DO Migrations
+        run: |
+          sleep 10  # Wait for deployment to be fully ready
+          curl -X GET "https://do-d1-drizzle.flashblaze.workers.dev/migrate"
