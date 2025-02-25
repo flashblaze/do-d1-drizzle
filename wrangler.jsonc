@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "do-d1-drizzle",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-02-25",
+  "d1_databases": [
+    {
+      "binding": "DO_D1_DB",
+      "database_name": "do-d1-drizzle",
+      "database_id": "2c796f08-3b14-42d3-85e4-a3a389114b00",
+      "migrations_dir": "drizzle/migrations",
+      "migrations_table": "__drizzle_migrations"
+    }
+  ]
+}
